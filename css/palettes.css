@@ -1,0 +1,47 @@
+/* Colour schemes without red or orange. Chosen with <html data-palette="…">.
+   The painting is shown in pure ink tones so its red tassel doesn't clash. */
+html[data-palette="jade"] {   /* 青 deep jade green */
+  --bg: #f1f3ee; --surface: #f8f9f5; --ink: #17201d; --muted: #62706a;
+  --accent: #2f6b5e; --seal: #2f6b5e; --gold: #8aa39a; --line: rgba(47, 107, 94, .26);
+  --panel: #12241f; --note: #a9cfc3;
+}
+html[data-palette="indigo"] { /* 黛 indigo blue */
+  --bg: #f2f3f1; --surface: #fafafa; --ink: #14181d; --muted: #667079;
+  --accent: #27405e; --seal: #27405e; --gold: #8d9bb0; --line: rgba(39, 64, 94, .24);
+  --panel: #18273a; --note: #a9c0dc;
+}
+html[data-palette="ink"] {    /* 墨 black and white only */
+  --bg: #f2f1ed; --surface: #f9f8f5; --ink: #151515; --muted: #6b6964;
+  --accent: #2b2b2b; --seal: #151515; --gold: #9a9891; --line: rgba(21, 21, 21, .22);
+  --panel: #151515; --note: #c9c7c0;
+}
+html[data-palette="plum"] {   /* 紫 aubergine purple */
+  --bg: #f3f1f1; --surface: #faf8f9; --ink: #1d171e; --muted: #6f6570;
+  --accent: #5b3b62; --seal: #5b3b62; --gold: #a595a8; --line: rgba(91, 59, 98, .24);
+  --panel: #231827; --note: #d3bfd8;
+}
+html[data-palette="moss"] {   /* 苔 moss green */
+  --bg: #f2f2ea; --surface: #f9f9f3; --ink: #1b1e16; --muted: #6a6e5e;
+  --accent: #56633a; --seal: #56633a; --gold: #a3a88a; --line: rgba(86, 99, 58, .28);
+  --panel: #1c2114; --note: #c9d2ad;
+}
+
+html[data-palette] .hero-art img { filter: grayscale(1) brightness(1.1) contrast(1.08); }
+html[data-palette] .ph { border-color: var(--gold); background: repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--accent) 7%, transparent) 14px 15px), var(--surface); }
+html[data-palette] .contact { background: var(--panel); }
+html[data-palette] .contact .form-note,
+html[data-palette] .contact .eyebrow { color: var(--note); }
+html[data-palette][data-theme="xuan"] .footer { background: var(--panel); }
+html[data-palette][data-theme="xuan"] .contact .section-head::before { background: var(--note); color: var(--panel); }
+html[data-palette][data-theme="xuan"] .contact .btn.primary { background: var(--note); border-color: var(--note); color: var(--panel); }
+html[data-palette][data-theme="dai"] .contact .eyebrow::before { background: var(--note); }
+html[data-palette][data-theme="dai"] .contact .btn.social:hover { color: var(--panel); }
+html[data-palette][data-theme="dai"] .contact .btn.primary { color: var(--panel); }
+html[data-palette][data-theme="dai"] .contact .btn.primary:hover { background: var(--note); border-color: var(--note); color: var(--panel); }
+
+/* Preview-only colour picker (removed once a scheme is chosen) */
+.palette-bar { position: fixed; z-index: 60; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; gap: 6px; padding: 6px; max-width: calc(100vw - 24px); overflow-x: auto;
+  background: rgba(255, 255, 255, .92); border: 1px solid rgba(0, 0, 0, .12); border-radius: 99px; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .35); font-family: system-ui, sans-serif; }
+.palette-bar button { display: flex; align-items: center; gap: 7px; border: 0; background: none; color: #222; font: 500 12px/1 system-ui, sans-serif; letter-spacing: 0; padding: 7px 12px 7px 8px; border-radius: 99px; cursor: pointer; white-space: nowrap; }
+.palette-bar button i { width: 16px; height: 16px; border-radius: 50%; flex: none; }
+.palette-bar button[aria-pressed="true"] { background: #1b1b1b; color: #fff; }

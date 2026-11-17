@@ -1,0 +1,17 @@
+# Original full-size photos and videos (about 1 GB) — stay on this computer only
+_originals/
+
+# Earlier design drafts — kept locally for reference, not published
+option-*.html
+css/theme-mist.css
+css/theme-ink.css
+css/theme-void.css
+css/theme-xuan.css
+css/theme-dai.css
+js/palette-preview.js
+assets/img/mist.jpg
+assets/img/void.jpg
+
+# Editor and system files
+.claude/
+.DS_Store
