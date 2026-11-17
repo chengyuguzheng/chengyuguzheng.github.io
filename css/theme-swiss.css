@@ -186,3 +186,7 @@ html[lang^="zh"] .hero-title { letter-spacing: .06em; line-height: 1.1; }
 .sound[aria-pressed="true"] { background: none; color: var(--accent); }
 .sound[aria-pressed="true"] .slash, .sound[aria-pressed="true"] .slash-gap { display: none; }
 .sound:hover { color: var(--accent); }
+
+/* Muted speaker in 30% grey; full colour once sound is on */
+.sound[aria-pressed="false"] { color: color-mix(in srgb, var(--ink) 30%, var(--bg)); }
+.sound[aria-pressed="false"]:hover { color: color-mix(in srgb, var(--ink) 55%, var(--bg)); }
